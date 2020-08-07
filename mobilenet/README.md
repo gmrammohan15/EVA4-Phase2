@@ -12,7 +12,7 @@ Train (transfer learning) MobileNet-V2 on a custom dataset of 31000 images:\
 21k train, 10k test, remove duplicated (same names)\
 with 4 classes Small 4Copter, Large 4Copter, Winged Drones and Flying Birds\
 model is trained on 224x224, images you'll download are not 224x224. Think and implement the best strategy\
-Upload the model on Lambda, and keep it ready for future use (use the same S3 bucket). \
+Upload the model on Lambda, and keep it ready for future use (use the same S3 bucket). 
 
 ## Solution
 Google drive link for images(training and test images for each class)
@@ -30,9 +30,9 @@ https://drive.google.com/drive/folders/1HM6nFXTDMWzWOXx09WDc3vgWChaTVLs4?usp=sha
 
 # Data preprocessing
 Used pytorch transforms to resize the images to 224x224.
-Sample Code, 
-        transforms.Resize(300),
-        transforms.RandomCrop (224, pad_if_needed=True),
+Sample Code, \
+        transforms.Resize(300),\
+        transforms.RandomCrop (224, pad_if_needed=True),\
         
 
 
