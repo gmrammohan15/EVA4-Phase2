@@ -28,9 +28,25 @@ https://drive.google.com/drive/folders/1HM6nFXTDMWzWOXx09WDc3vgWChaTVLs4?usp=sha
     "Winged_Drones": 5531
 
 
-# links:
-Training: https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/EvaMobileNetDrones.ipynb
-Misclassified image : https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/EvaMobileNetDrones.ipynb
+# Data preprocessing
+Used pytorch transforms to resize the images to 224x224.
+Sample Code, 
+        transforms.Resize(300),
+        transforms.RandomCrop (224, pad_if_needed=True),
+        
+
+
+# Model Training: 
+
+Used standard mobilenet model from pytorch.
+model = models.mobilenet_v2 (pretrained=True)
+model.classifier[1] = torch.nn.Linear(in_features=model_ft.classifier[1].in_features, out_features=4)
+model = model.to(device)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)
+scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1)
+
+https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/EvaMobileNetDrones.ipynb
 
 
 # Sample Images for training
@@ -49,10 +65,23 @@ Misclassified image : https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mo
 
 # Misclassified images
 
+https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/EvaMobileNetDrones.ipynb
+
+
+Winged Drones 
+
 ![image](https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/images/WingedDrones.png)
+
+
+Flying Birds
 
 ![image](https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/images/FlyingBirds.png)
 
+
+LargeQuad
+
 ![image](https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/images/LargeQuad.png)
+
+SmallQuad
 
 ![image](https://github.com/gmrammohan15/EVA4-Phase2/blob/master/mobilenet/images/SmallQuad.png)
