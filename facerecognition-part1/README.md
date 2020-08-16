@@ -8,6 +8,8 @@ Create a Face Alignment App on Lambda (code is shared above), where if someone u
 Image with more than 1 face is not processed for alignment. \
 Share the link to your S3 html file that can be accessed by anyone. Also share the link to your GitHub repo for the code (please remember to always remove the keys, secrect_keys, etc from your code before uploading to GitHub.\
 
+# Solution
+
 AWS API Endpoint
 
 API: https://8ety3yigs7.execute-api.ap-south-1.amazonaws.com/dev/classify 
