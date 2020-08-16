@@ -10,8 +10,10 @@ Share the link to your S3 html file that can be accessed by anyone. Also share t
 
 AWS API Endpoint
 
-[POST] https://8ety3yigs7.execute-api.ap-south-1.amazonaws.com/dev/classify 
+API: https://8ety3yigs7.execute-api.ap-south-1.amazonaws.com/dev/classify 
+
+Operation: POST
 
 http settings
 Headers : 'content-type: multipart/form-data' \
-Body : Image file with empty key
+Body : Image file
