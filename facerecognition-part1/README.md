@@ -13,5 +13,5 @@ AWS API Endpoint
 [POST] https://8ety3yigs7.execute-api.ap-south-1.amazonaws.com/dev/classify 
 
 http settings
-Headers : 'content-type: multipart/form-data'
+Headers : 'content-type: multipart/form-data' \
 Body : Image file with empty key
